@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import HeroSection from "../components/hero-section/HeroSection";
+import {
+  aboutObj,
+  discoverObj,
+  servicesObj,
+} from "../components/InfoSection/data";
 import InfoSection from "../components/InfoSection/InfoSection";
 import Navbar from "../components/navbar/Navbar";
 import Sidebar from "../components/sidebar/Sidebar";
@@ -17,7 +22,9 @@ const HomePage = () => {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <HeroSection />
-      <InfoSection />
+      <InfoSection {...aboutObj} />
+      <InfoSection {...discoverObj} />
+      <InfoSection {...servicesObj} />
     </>
   );
 };
