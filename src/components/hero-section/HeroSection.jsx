@@ -11,6 +11,7 @@ import {
   ArrowRight,
 } from "./HeroSectionStyles";
 import dataVideo from "../../videos/dataVideo.mp4";
+import { ScrollButton } from "../scroll-button/ScrollButtonStyles";
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
@@ -31,9 +32,15 @@ const HeroSection = () => {
           aperiam minima error aliquid odio.
         </HeroP>
         <HeroBtnWrapper>
-          <Button to="signUp" onMouseEnter={onHover} onMouseLeave={onHover}>
+          <ScrollButton
+            to="signUp"
+            onMouseEnter={onHover}
+            onMouseLeave={onHover}
+            primary="true"
+            dark="true"
+          >
             Get Started {hover ? <ArrowForward /> : <ArrowRight />}{" "}
-          </Button>
+          </ScrollButton>
         </HeroBtnWrapper>
       </HeroContent>
     </HeroContainer>
