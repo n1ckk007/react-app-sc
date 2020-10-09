@@ -3,10 +3,11 @@ import HeroSection from "../components/hero-section/HeroSection";
 import {
   aboutObj,
   discoverObj,
-  servicesObj,
+  signUpObj,
 } from "../components/InfoSection/data";
 import InfoSection from "../components/InfoSection/InfoSection";
 import Navbar from "../components/navbar/Navbar";
+import Services from "../components/services/Services";
 import Sidebar from "../components/sidebar/Sidebar";
 
 const HomePage = () => {
@@ -24,7 +25,8 @@ const HomePage = () => {
       <HeroSection />
       <InfoSection {...aboutObj} />
       <InfoSection {...discoverObj} />
-      <InfoSection {...servicesObj} />
+      <Services />
+      <InfoSection {...signUpObj} />
     </>
   );
 };

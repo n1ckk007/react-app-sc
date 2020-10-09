@@ -36,12 +36,12 @@ export const discoverObj = {
   darkText: true,
 };
 
-export const servicesObj = {
-  id: "services",
+export const signUpObj = {
+  id: "signUp",
   lightBg: true,
   lightText: false,
   lightTextDesc: false,
-  topLine: "Services",
+  topLine: "Sign Up",
   headline: "Lorem ipsum dolor sit amet",
   description:
     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, iusto.",

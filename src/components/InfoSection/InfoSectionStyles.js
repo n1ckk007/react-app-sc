@@ -22,6 +22,7 @@ export const InfoWrapper = styled.div`
 `;
 
 export const InfoRow = styled.div`
+  margin-top: 150px;
   display: grid;
   grid-auto-columns: minmax(auto, 1fr);
   grid-template-areas: ${({ imgStart }) =>
