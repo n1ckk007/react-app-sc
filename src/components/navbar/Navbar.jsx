@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
+import {animateScroll as scroll} from 'react-scroll'
 import {
   Burger,
   Nav,
@@ -29,31 +30,36 @@ useEffect(()=> {
   window.addEventListener('scroll', changeNav)
 }, [])
 
+const toggleHome = () => {
+  scroll.scrollToTop()
+}
+
   return (
     <>
     <IconContext.Provider value={{color: '#fff'}}>
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
-          <NavLogo to="/">Logo</NavLogo>
+          <NavLogo to="/" onClick={toggleHome}>Logo</NavLogo>
           <Burger onClick={toggle}>
             <FaBars />
           </Burger>
           <NavMenu>
             <NavItem>
-              <NavLink to="about">About</NavLink>
+              <NavLink to="about" 
+              smooth={true} duration={500} spy={true} exact='true' offset={-80}>About</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="discover">Discover</NavLink>
+              <NavLink to="discover" smooth={true} duration={500} spy={true} exact='true' offset={-80}>Discover</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="services">Services</NavLink>
+              <NavLink to="services" smooth={true} duration={500} spy={true} exact='true' offset={-80}>Services</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="signUp">Sign Up</NavLink>
+              <NavLink to="signUp" smooth={true} duration={500} spy={true} exact='true' offset={-80}>Sign Up</NavLink>
             </NavItem>
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to="/signIn">Sign In</NavBtnLink>
+            <NavBtnLink to="/signIn" smooth={true} duration={500} spy={true} exact='true' offset={-80}>Sign In</NavBtnLink>
           </NavBtn>
         </NavbarContainer>
       </Nav>
