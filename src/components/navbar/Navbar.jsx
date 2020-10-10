@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
+import { IconContext } from "react-icons/lib";
 import {
   Burger,
   Nav,
@@ -13,9 +14,25 @@ import {
 } from "./NavbarStyles";
 
 const Navbar = ({ toggle }) => {
+const [scrollNav, setScrollNav] = useState(false)
+
+const changeNav = () => {
+  // if window scroll y is greater than or = 80px update state
+  if(window.scrollY >=80) {
+    setScrollNav(true)
+  } else {
+    setScrollNav(false)
+  }
+}
+
+useEffect(()=> {
+  window.addEventListener('scroll', changeNav)
+}, [])
+
   return (
     <>
-      <Nav>
+    <IconContext.Provider value={{color: '#fff'}}>
+      <Nav scrollNav={scrollNav}>
         <NavbarContainer>
           <NavLogo to="/">Logo</NavLogo>
           <Burger onClick={toggle}>
@@ -40,6 +57,7 @@ const Navbar = ({ toggle }) => {
           </NavBtn>
         </NavbarContainer>
       </Nav>
+      </IconContext.Provider>
     </>
   );
 };
