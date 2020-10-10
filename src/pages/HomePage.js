@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Footer from "../components/footer/Footer";
 import HeroSection from "../components/hero-section/HeroSection";
 import {
   aboutObj,
@@ -27,6 +28,7 @@ const HomePage = () => {
       <InfoSection {...discoverObj} />
       <Services />
       <InfoSection {...signUpObj} />
+      <Footer />
     </>
   );
 };
