@@ -48,7 +48,7 @@ const Footer = () => {
                   <SocialMedia>
                       <SocialMediaWrap>
                           <SocialLogo to='/' onClick={toggleHome}>Logo</SocialLogo>
-    <WebsiteRights> Copyright {new Date().getFullYear()} All Rights Reserved</WebsiteRights>
+    <WebsiteRights> Copyright © {new Date().getFullYear()} All Rights Reserved</WebsiteRights>
                       <SocialIcons>
                           <SocialIconLink href ='/' target='_blank' aria-label='Facebook'>
                               <FaFacebook />
