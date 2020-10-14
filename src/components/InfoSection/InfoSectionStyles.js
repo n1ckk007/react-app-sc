@@ -19,6 +19,10 @@ export const InfoWrapper = styled.div`
   margin-left: auto;
   padding: 0 24px;
   justify-content: center;
+
+  @media screen and (min-width: 2000px) {
+    height: 860px;
+  }
 `;
 
 export const InfoRow = styled.div`
